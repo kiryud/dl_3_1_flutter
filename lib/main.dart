@@ -1,5 +1,6 @@
+import 'UI/pages/todo/todo_page.dart';
 import 'package:flutter/material.dart';
-import 'UI/default_page.dart';
+import 'UI/pages/default_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
     //  home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const DefaultPage(),
+      home: const TodoPage(),
     );
   }
 }

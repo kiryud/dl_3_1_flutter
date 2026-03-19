@@ -82,6 +82,7 @@ c Clear the screen
 q Quit (terminate the application on the device).
 
 - 특히 hot reload를 사용하면 수정 사항을 바로 적용시켜 볼 수 있다.
+(근데 ctrl + l 같은건 없어서 clear하려면 걍 엔터 열심히 쳐야함)
 
 #### ??
 Stateless vs Stateful
@@ -109,8 +110,26 @@ body: Row(
 ```
 요렇게 됨
 
+```dart
+return Scaffold()
+```
+-> flutter는 이러면 전체 화면 영역 잡고 움직임
+```dart
+return SafeArea(
+  child: Scaffold(
+    ...
+  )
+)
+```
+->이래야 상단 안드로이드 UI아래에 잘 들어감
 
+혼자 손 아이콘 넣던지 아이콘 버튼 만들던지 딴?짓하다 이쪽 정리는 바로바로 못함
+대충 영역을 column, row 중첩해서 만드는건데 결국 표 만드는거임
 
+아이콘을 쓸 때 얘네가 둥근 그 배경 영역 색상 지정은 바로 못 하게 해서
+Container -> decoration: BoxDecoration -> shape: .circle 이걸로 우회해야함
+그와중에 color 중첩해서 쓰면 오류남 ㅇㅇ
+(덮어쓰기되면 알아차리기 힘들어서 이건 오류나는게 좋긴 함)
 
 
 
