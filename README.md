@@ -32,7 +32,7 @@ latist version을 알려준다
 ### 실습
 - 프로젝트 생성
 ``` powershell
-flutter create --org \[ ??? \] \[ ??? \]
+flutter create --org [ ??? ] [ ??? ]
 ```
 - gitignore 설정
 
