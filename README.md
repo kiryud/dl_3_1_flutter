@@ -60,6 +60,65 @@ c/cpp 위주로 해서 신기하긴 하다
 | flutter 구조
 
 ---
+안드로이드 머테리얼 빌더
+[https://material-foundation.github.io/material-theme-builder/]
+
+Figma 사용 가능하면 flutter에서 사용 가능하게 export해올 수 있음
+---
+### 실습
+```shell
+flutter emulators
+flutter emulators --launch [ID]
+flutter run --debug
+```
+
+#### flutter run 상태에서 사용 가능한 기능
+Flutter run key commands.
+r Hot reload.
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate "flutter run" but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+- 특히 hot reload를 사용하면 수정 사항을 바로 적용시켜 볼 수 있다.
+
+#### ??
+Stateless vs Stateful
+
+stl 입력 후 tab -> StatelessWidget Template (standard tamplate library 아님 ㅋㅋ)
+stf 입력 후 tab -> StatefulWidget Template
+
+자동 생성된 return const Placeholder(); 에서
+Placeholder -> 와이어 프레임 화면 생성
+그러니 기반이 될 Scaffold로 수정
+
+scaffold 내부에 appBar, body 등 넣을 수 있음
+
+body -> Row -> children -> Container(color: Color.asYouWish,),x3 으로 세부적인 구성 들어감
+안나옴 (어따 그려야할지 몰?루임)
+그래서 모든 Container 대상으로 클릭 -> 좌측 노란 전구 -> Wrap with Expanded 선택
+```dart
+body: Row(
+        children: [
+          Expanded(child:Container(color: Colors.yellow,)),
+          Expanded(child:Container(color: Colors.blue,)),
+          Expanded(child:Container(color: Colors.black,)),
+        ],
+      ),
+```
+요렇게 됨
+
+
+
+
+
+
+
+
+
+
+---
 default README.md
 
 # ex00
