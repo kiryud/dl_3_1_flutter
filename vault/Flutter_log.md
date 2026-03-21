@@ -1,7 +1,9 @@
 # Self_Study
 
-[개발환경설정](개발환경설정.md)
-[flutter 구조](flutter_something/flutter_app_구조)
+- [개발환경설정](개발환경설정.md)
+- [flutter 구조](flutter_something/flutter_app_구조)
+- [공용 계정 github 문제 해결해보기](git_something/how_to_use_Git_and_Github_in_Window.md)
+
 
 # DL
 
