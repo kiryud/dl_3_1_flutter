@@ -2,7 +2,7 @@
 
 대림대학교 3학년 2반(앱 전공) 수업
 
-If you want to see my study log, use this link [Flutter log](./vault/Flutter_log)
+If you want to see my study log, use this link [Flutter log](./vault/Flutter_log.md)
 
 ---
 default README.md
