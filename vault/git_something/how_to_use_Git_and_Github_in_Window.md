@@ -18,6 +18,8 @@ git config --global credential.useHttpPath true
 git remote set-url origin https://USERNAME@github.com/USER/REPO.git   
 ```
 
+(이 부분 실험중)
+
 - 설정 없이 작업하는 상황이라면 아예 github에 유저 계정 기반으로 접근하도록 주소 작성할 것
 ```shell
 https://username@github.com/username/repo.git
