@@ -114,8 +114,9 @@ git remote set-url origin git@github-kiryud:kiryud/dl_3_1_flutter.git
 
 ## Git Credential Manager 기존 정보 삭제
 ### 잘 모르면 여기부턴 절대 하지 마시오
-시작 - 자격증명 관리자 - Windows 자격 증명
-git:url -> 자기거 삭제
+
+- 검색 "자격증명 관리자" - Windows 자격 증명
+git:url -> 자기거 삭제 (중간에 자기 아이디 보인다)
 
 ```powershell
 git credential-manager get
