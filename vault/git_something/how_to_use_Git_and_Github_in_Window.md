@@ -118,8 +118,12 @@ git remote set-url origin git@github-kiryud:kiryud/dl_3_1_flutter.git
 git:url -> 자기거 삭제
 
 ```powershell
+git credential-manager get
+protocol=https
+host=github.com
+# 깃 프로그램이 켜지며 로그인(브라우저를 통한 로그인도 가능) 창이 열림
+
 git credential-manager erase
-# 아마 입력 기다릴 것임
 protocol=https
 host=github.com
 username="본인 계정"
