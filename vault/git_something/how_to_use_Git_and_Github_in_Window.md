@@ -18,8 +18,6 @@ git config --global credential.useHttpPath true
 git remote set-url origin https://USERNAME@github.com/USER/REPO.git   
 ```
 
-(이 부분 실험중)
-
 - 설정 없이 작업하는 상황이라면 아예 github에 유저 계정 기반으로 접근하도록 주소 작성할 것
 ```shell
 https://username@github.com/username/repo.git
@@ -30,8 +28,20 @@ https://username@github.com/username/repo.git
 | 궁금하면 "ssh 대칭 키" 검색을 하도록 하자
 #### 진짜 해결법 - 계정별로 다른 ssh key를 만들고 등록하기
 1. 이메일 정보가 포함된 키 생성
-```powershell
+- mac or linux : shell
+```shell
 ssh-keygen -t ed25519 -C "user@email.com" -f "~/.ssh/본인학번"
+
+```
+- window : powershell
+```powershell
+ssh-keygen -t ed25519 -C "user@email.com" -f "C:\Users\user/.ssh/본인학번"
+```
+
+- 생성이 안되면 에러가 나지만 잘 생성된다면 비밀번호를 입력하면 된다.
+```shell
+Enter passphrase (empty for no passphrase): [비밀번호 입력]
+Enter same passphrase again: [비밀번호 확인]
 ```
 - ssh-keygen : Secure Shell Protocol을 사용할 때 사용할 key를 만들어주는 명령어(프로그램)
 - option 't' : key type 지정하기
