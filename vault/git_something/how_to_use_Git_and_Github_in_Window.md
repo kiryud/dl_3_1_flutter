@@ -35,7 +35,7 @@ ssh-keygen -t ed25519 -C "user@email.com" -f "~/.ssh/본인학번"
 ```
 - window : powershell
 ```powershell
-ssh-keygen -t ed25519 -C "user@email.com" -f "C:\Users\user/.ssh/본인학번"
+ssh-keygen -t ed25519 -C "user@email.com" -f "C:\Users\user\.ssh\본인학번"
 ```
 (만약 바로 안된다면 .ssh 폴더가 존재하는지 확인해보고 없다면 "mkdir .ssh"를 써보자)
 
@@ -64,11 +64,14 @@ Enter file in which to save the key (C:\Users\user\.ssh\ID_ed25519):
 - 이거 뜨면 얌전히 y 하면 됨
 
 내 예시
+- window
 ```powershell
-ssh-keygen -t ed25519 -C "jijeong@student.42seoul.kr" -f "~/.ssh/kiryud"
+ssh-keygen -t ed25519 -C "jijeong@student.42seoul.kr" -f "C:\Users\user\.ssh\202130327"
 ```
-- 그래 난 학번 말고 id 썼어
-- 한국어만 아니라면 너희도 취향대로 하렴
+- mac, linux
+```shell
+ssh-keygen -t ed25519 -C "jijeong@student.42seoul.kr" -f "~/.ssh/202130327"
+```
 
 
 2. Github에서 공개키 등록하기
