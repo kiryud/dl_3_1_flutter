@@ -23,22 +23,23 @@ git remote set-url origin https://USERNAME@github.com/USER/REPO.git
 https://username@github.com/username/repo.git
 ```
 
+# 잘 모르면 여기부턴 절대 하지 마시오
 ## 진짜 문제 -> ssh 설정을 왜 안했니
 ### 애들이 Secure Shell Protocol을 모름
 | 궁금하면 "ssh 대칭 키" 검색을 하도록 하자
-#### 진짜 해결법 - 계정별로 다른 ssh key를 만들고 등록하기
+### 진짜 해결법 - 계정별로 다른 ssh key를 만들고 등록하기
 1. 이메일 정보가 포함된 키 생성
 - mac or linux : shell
 ```shell
 ssh-keygen -t ed25519 -C "user@email.com" -f "~/.ssh/본인학번"
-
 ```
 - window : powershell
 ```powershell
 ssh-keygen -t ed25519 -C "user@email.com" -f "C:\Users\user/.ssh/본인학번"
 ```
+(만약 바로 안된다면 .ssh 폴더가 존재하는지 확인해보고 없다면 "mkdir .ssh"를 써보자)
 
-- 생성이 안되면 에러가 나지만 잘 생성된다면 비밀번호를 입력하면 된다.
+- 생성이 안되면 에러가 나지만 (에러 로그 잘 나옴) 잘 생성된다면 비밀번호를 입력하면 된다.
 ```shell
 Enter passphrase (empty for no passphrase): [비밀번호 입력]
 Enter same passphrase again: [비밀번호 확인]
@@ -88,23 +89,29 @@ cat 본인학번.pub
 - 예시를 토대로 본인의 정보를 등록하면 된다
 - 첫번째건 틀, 두번째건 내가 쓴 예시다
 
+1. PowerShell을 관리자모드로 연다
+2. .ssh 폴더로 이동한다 ("cd .ssh")
+3. VSC를 연다 ("code .")
+4. 확장자 없는 config 파일을 만들고 내용을 적는다
 예시
 ```config
 Host github-account
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_ed25519_account1
-
+```
+내 경우
+```config
 Host github-kiryud
     HostName github.com
     User git
-    IdentityFile ~/.ssh/kiryud
+    IdentityFile ~/.ssh/202130327
 ```
 
 4. git remote를 통한 접근 URL 수정
 예시 - default
 ```shell
-git remote set-url origin git@github-account1:username/repo.git
+git remote set-url origin git@github-account:username/repo.git
 ```
 
 예시 - 내 경우
@@ -112,11 +119,13 @@ git remote set-url origin git@github-account1:username/repo.git
 git remote set-url origin git@github-kiryud:kiryud/dl_3_1_flutter.git
 ```
 
-## Git Credential Manager 기존 정보 삭제
-### 잘 모르면 여기부턴 절대 하지 마시오
+## Git Credential 기존 정보 삭제
 
+### window가 관리중인 Credential 제거
 - 검색 "자격증명 관리자" - Windows 자격 증명
 git:url -> 자기거 삭제 (중간에 자기 아이디 보인다)
+
+### Git Credential Manager 기존 정보 삭제
 
 ```powershell
 git credential-manager get
