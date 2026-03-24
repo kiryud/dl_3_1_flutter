@@ -92,10 +92,10 @@ cat 본인학번.pub
 - 예시를 토대로 본인의 정보를 등록하면 된다
 - 첫번째건 틀, 두번째건 내가 쓴 예시다
 
-1. PowerShell을 관리자모드로 연다
-2. .ssh 폴더로 이동한다 ("cd .ssh")
-3. VSC를 연다 ("code .")
-4. 확장자 없는 config 파일을 만들고 내용을 적는다
+    1. PowerShell을 관리자모드로 연다
+    2. .ssh 폴더로 이동한다 ("cd .ssh")
+    3. VSC를 연다 ("code .")
+    4. 확장자 없는 config 파일을 만들고 내용을 적는다
 예시
 ```config
 Host github-account
@@ -110,6 +110,8 @@ Host github-kiryud
     User git
     IdentityFile ~/.ssh/202130327
 ```
+
+
 
 4. git remote를 통한 접근 URL 수정
 예시 - default
