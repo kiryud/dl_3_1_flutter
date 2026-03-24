@@ -111,6 +111,8 @@ Host github-kiryud
     IdentityFile ~/.ssh/202130327
 ```
 
+- 참고로 config 파일이 .ssh에 존재하지 않을 때 git/ssh는 id_ + ssh-key-type 을 먼처 찾아본다. 이는 ssh-keygen을 했을 때 표준 키 타입에 따라 기본적으로 생성되는 키의 명칭이다.
+- 개인 컴퓨터인 경우 키 이름을 기본 설정대로, 컨피그 파일도 작성하지 않더라도 github에 공개키를 잘 등록하기만 하면 알아서 잘 작동한다는 뜻이다.
 
 
 4. git remote를 통한 접근 URL 수정
