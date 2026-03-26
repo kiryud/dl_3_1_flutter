@@ -121,3 +121,45 @@ class DefaultPage extends StatelessWidget {
 - Align / Padding / Center / SizeBox / Container는 어디서든 사용 가능
 - 중첩 제한은 없으나 가독성 있게 잘 관리하도록 하자
 
+```dart
+ElevatedButton(
+    onPressed: (){},
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.deepPurpleAccent,
+      textStyle: TextStyle(
+        color: Colors.white,
+      )
+    ),
+    child: Text('전체'),
+  ),
+```
+
+스크롤 실습
+```dart
+class FilterRow extends StatelessWidget {
+  const FilterRow({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: .horizontal,
+      child: Row(
+        spacing: 10,
+        children: [
+          _buildFilter(isSelected: true, text: '전체'),
+          _buildFilter(text: '업무'),
+          _buildFilter(text: '개인'),
+          _buildFilter(text: '건강'),
+          _buildFilter(text: '운동'),
+          _buildFilter(text: '빨래'),
+          _buildFilter(text: '설거지'),
+          _buildFilter(text: '청소'),
+          _buildFilter(text: '생필품'),
+        //  _buildFilter(),
+        ],
+      ),
+    );
+  }
+}
+```
+

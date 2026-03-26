@@ -1,6 +1,7 @@
 import 'package:ex00/UI/pages/todo/widget/filter_row.dart';
 import 'package:ex00/UI/pages/todo/widget/title_content.dart';
 import 'package:ex00/UI/pages/todo/widget/progress_card.dart';
+import 'package:ex00/UI/pages/todo/widget/todo_list.dart';
 import 'package:flutter/material.dart';
 
 class TodoPage extends StatelessWidget {
@@ -13,7 +14,8 @@ class TodoPage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
-            
+            crossAxisAlignment: .stretch,
+            spacing: 10,
             children: [
               // 타이틀 상단 영역
               Header(),
@@ -24,8 +26,9 @@ class TodoPage extends StatelessWidget {
               // TODO: 주제별 항목 (전체, 업무, 개인, 건강)
               // 조건에 따라 이 항목에서 표기될 todolist의 내용이 바뀌기때문에 이벤트가 상단에 있어야하는걸까? 아니면 이벤트 위치와 별개로 수정하는걸까?
               // TODO: 체크박스 시스템 만들기
-              // 
               FilterRow(),
+              _buildTodoTitle(),
+              TodoList(),
             ],
           ),
         ),
@@ -36,4 +39,15 @@ class TodoPage extends StatelessWidget {
       )
     );
   }
+}
+
+Widget _buildTodoTitle() {
+  return Text(
+    '오늘 할 일',
+    style: TextStyle(
+      color: Color(0xff171717),
+      fontSize: 16,
+      fontWeight: .bold,
+    ),
+  );
 }
