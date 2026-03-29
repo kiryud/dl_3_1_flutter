@@ -35,7 +35,7 @@ push:
 	@git status
 	@printf "$(CYAN)git add .$(RESET)\n"
 	@git add .
-	@printf "$(CYAN)git commit -m "$(MSG)"$(RESET)\n"
+	@printf "$(CYAN)git commit -m '$(MSG)'$(RESET)\n"
 	@git commit -m "$(MSG)"
 	@printf "$(CYAN)git push$(RESET)\n"
 	@git push
