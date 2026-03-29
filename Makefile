@@ -1,4 +1,4 @@
-MSG = "Makefile : default message"
+MSG = 'Makefile : default message'
 
 
 run:
@@ -18,5 +18,5 @@ pull:
 push:
 	git status;
 	git add .
-	git commit -m $(MSG)
+	git commit -m "$(MSG)"
 	git push
