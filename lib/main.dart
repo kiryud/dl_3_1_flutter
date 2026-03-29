@@ -1,6 +1,5 @@
 import 'UI/pages/todo/todo_page.dart';
 import 'package:flutter/material.dart';
-import 'UI/pages/default_page.dart';
 
 void main() {
   runApp(const MyApp());
