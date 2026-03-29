@@ -1,3 +1,9 @@
+MSG = "Makefile : default message"
+
+
+run:
+	flutter run --debug
+
 setting:
 	flutter clean;
 	flutter pub get;
@@ -9,11 +15,8 @@ pull:
 	git fetch
 	git pull
 
-
-
 push:
 	git status;
 	git add .
-	git commit -m "Makefile : save everything"
+	git commit -m $(MSG)
 	git push
-	
