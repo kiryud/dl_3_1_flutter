@@ -164,3 +164,31 @@ physics: NeverScrollableScrollPhysics(),
 ```
 요걸 해주면 에러가 안남
 (physics는 주석처리해도 에러 일단은 안남)
+
+## 5w
+
+### 실습
+#### flutter 최신 버전으로 올리기
+1. flutter upgrade
+2. flutter doctor -v로 flutter, dart 버전 확인
+3. pubspec.yaml에서 dart 버전 수정
+
+#### Todo list 완성하기
+- todo list의 상태를 표현하기 위한 badge 만들기
+- badge 상태를 관리할 enum 만들기
+  - 상태의 종류 todo done doing
+  - 각 상태의 차이 글자색, 배경색, 문구
+- todo list에 들어갈 dummy data를 배열을 통해 정의하기
+- datetime을 원하는대로 설정하기 위한 dataformat 활용
+- checkbox 만들고 enum의 상태를 활용해 체크됨 / 체크 안됨 구현하기
+
+#### custom bottom navigation bar 구현하기
+- Scaffold의 bottomNavigationBar는 위치와 형태가 고정되어있어 사용하지 않음
+- 결국 네비게이션 바 영역 안에 4가지 요소가 수평으로 배치된 것임
+- 이 영역에서 다른 것이 선택되었을 때 화면 구성이 변화해야만함 -> stf
+- 같은 형식, 다른 데이터인 경우 -> map을 통해 따로 만들어진 틀에 데이터 삽입하여 제작 후 list화
+
+## Todo
+### floatingActionButton
+### bottomSheet
+> floating Action Button으로부터 호출됨
