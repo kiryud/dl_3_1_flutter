@@ -1,3 +1,4 @@
+import 'package:ex00/UI/pages/todo/bottom_navigation/bottom_nevigation.dart';
 import 'package:ex00/UI/pages/todo/widget/filter_row.dart';
 import 'package:ex00/UI/pages/todo/widget/title_content.dart';
 import 'package:ex00/UI/pages/todo/widget/progress_card.dart';
@@ -29,6 +30,9 @@ class TodoPage extends StatelessWidget {
               FilterRow(),
               _buildTodoTitle(),
               TodoList(),
+              // Custom Bottom NAvigation
+              BottomNevigation(),
+              // Floating Action Button
             ],
           ),
         ),
