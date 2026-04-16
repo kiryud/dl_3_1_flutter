@@ -14,6 +14,7 @@ class TodoList extends StatelessWidget {
       (title : "운동하기", filter :  "건강", time : DateTime.now(), process : Process.done) , 
       (title : "일하기", filter :  "업무", time : DateTime.now(), process : Process.doing) , 
       (title : "복습하기", filter :  "공부", time : DateTime.now(), process : Process.todo) , 
+      (title : "식사하기", filter :  "건강", time : DateTime.now(), process : Process.todo) , 
       ];
 
     return ListView.separated(
